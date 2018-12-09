@@ -16,8 +16,7 @@ The rest of the files are the chosen php tests.
  - Composer version 1.7.3
 
 ### Installation
-- Put the **orchard_drupal_test** into the root. 
-- The root of the website in **orchard_drupal_test/web**.
+- Put the **orchard_drupal_test** into the root. The root is in **orchard_drupal_test/web**.
 - Import the sql file to mysql.
 - Update the **settings.php** file.
 
