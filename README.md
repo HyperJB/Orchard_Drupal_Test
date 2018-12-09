@@ -21,7 +21,7 @@ The way how I set this project up was by creating the taxonomy to mimic the main
 This way the user can change the image in admin and no need to ftp the image.
 
 I used the block hook to find where the node belows and check if the node has a parent or not. Then it uses the weight of the menu item to
-locate the weight of the taxonomy weight.  Then it grabs the image from and uses that.
+locate the weight of the taxonomy weight.  Then loads the image from the taxonomy term.
 
 - Use "drush uli" command to login. Will also email with login details.
 
