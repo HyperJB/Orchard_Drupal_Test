@@ -18,7 +18,7 @@ The rest of the files are the chosen php tests.
 ### Installation
 - Put the **orchard_drupal_test** into the root. The root is in **orchard_drupal_test/web**.
 - Import the sql file to mysql.
-- Update the **settings.php** file.
+- Update the **settings.php** file located in **\orchard_drupal_test\web\sites\default**
 
 
 ### Details of the project:
