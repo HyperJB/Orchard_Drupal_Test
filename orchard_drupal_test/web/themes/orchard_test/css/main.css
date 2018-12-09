@@ -1,0 +1,62 @@
+
+.menu {
+    height: 33px;
+    line-height: 30px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.menu li {
+    list-style: none;
+    background-color: #000;
+}
+
+.menu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.menu li a:hover {
+    font-weight: bold;
+}
+
+.banner-image {
+    background-color: #ccc;
+    height: 400px;
+}
+
+#block-orchard-test-local-tasks ul::after {
+    clear: both;
+    display: table;
+    content: " ";
+}
+
+#block-orchard-test-local-tasks li {
+    list-style: none;
+    background-color: lightblue;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+}
+
+#block-orchard-test-branding {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#block-orchard-test-branding img {
+    width: 70px;
+}
+
+#block-orchard-test-branding a {
+    font-size: 20px;
+    color: #000;
+}
+
+#block-orchard-test-branding a:hover {
+    color: #000;
+}

@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Orchard test theme.
+ */
+
+use \Drupal\taxonomy\Entity\Term;
+
+function orchard_test_preprocess_block(&$variables) {
+
+    // Get banner image block
+    if ($variables['elements']['#id'] == 'bannerimage') {
+
+        // Get Current Node
+        $node = \Drupal::routeMatch()->getParameter('node');
+        if ($node instanceof \Drupal\node\NodeInterface) {
+
+            // Assign node id
+            $nid = $node->id();
+
+            $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+
+            // Get menu item of current node
+            $links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', array('node' => $nid));
+            if ($link = reset($links)) {
+
+                // If this node is a chid node
+                if ($parent = $link->getParent()) {
+
+                    // Get parent node menu item
+                    $parent = $menu_link_manager->createInstance($parent);
+                    
+                    // Get weight of menu item
+                    $menu_item_weight = $parent->getWeight();
+
+                }
+                else {
+
+                    // Get weight of menu item
+                    $menu_item_weight = $link->getWeight();
+                    
+                }
+            }
+
+            // Set taxonomy name
+            $taxonomy_name = 'banner_image';
+
+            // Get all taxonomy items under set taxonomy_name
+            $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($taxonomy_name);
+
+            // Loop through terms and break when found.
+            foreach ($terms as $term) {
+
+                if($term->weight == $menu_item_weight) {
+
+                    // Get term entity
+                    $terme      = Term::load($term->tid);
+
+                    // Get image uri
+                    $image_uri  = $terme->get('field_banner_image')->entity->uri->value;
+    
+                    // Set image to use on page.
+                    $variables['banner_image'] = file_create_url($image_uri);
+
+                    break;
+                }
+            }
+
+            // Clear cache so the image doesn't get stuck
+            $variables['#cache']['max-age'] = 0;
+
+        }
+    }
+}

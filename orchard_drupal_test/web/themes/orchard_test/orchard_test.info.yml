@@ -1,0 +1,16 @@
+name: "Orchard Test v0.1"
+description: "This is a theme for Orchard test"
+type: theme
+core: 8.x
+
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  banner: 'Banner'
+  content: 'Content'
+  unwanted: 'Disabled'
+
+libraries:
+  - orchard_test/global-css
+  - orchard_test/global-js
+  
