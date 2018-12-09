@@ -7,12 +7,12 @@ The rest of the files are the chosen php tests.
 ## First Part of the Test (Drupal)
 
 ### Setup
-XAMPP Version: 7.2.12.
-PHP Version: 7.2.12.
-Drupal version : 8.6.4
-mySQL database.
-GitBash as commandline
-Visual Code as editor
+ - XAMPP Version: 7.2.12.
+ - PHP Version: 7.2.12.
+ - Drupal version : 8.6.4
+ - mySQL database.
+ - GitBash as commandline
+ - Visual Code as editor
 
 ### Details of the project:
 
