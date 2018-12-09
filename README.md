@@ -13,6 +13,7 @@ The rest of the files are the chosen php tests.
  - mySQL database.
  - GitBash as commandline
  - Visual Code as editor
+ - Composer version 1.7.3
 
 ### Installation
 - Put the **orchard_drupal_test** into the root. 
