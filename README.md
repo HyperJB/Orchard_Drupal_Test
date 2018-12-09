@@ -14,6 +14,13 @@ The rest of the files are the chosen php tests.
  - GitBash as commandline
  - Visual Code as editor
 
+### Installation
+- Put the **orchard_drupal_test** into the root. 
+- The root of the website in **orchard_drupal_test/web**.
+- Import the sql file to mysql.
+- Update the **settings.php** file.
+
+
 ### Details of the project:
 
 Decided to do this test in Drupal 8 since I have been doing projects with this version recently.
@@ -24,6 +31,14 @@ I used the block hook to find where the node belows and check if the node has a 
 locate the weight of the taxonomy weight.  Then loads the image from the taxonomy term.
 
 - Use "drush uli" command to login. Will also email with login details.
+- Taxonomy is called Banner Image
+- All pages was created with "Basic page" Content type
+- Theme is called "Orchard_test"
+- Created 3 twig files
+   - block--bannerimage.html.twig (for the banner image of the page)
+   - menu--main.html.twig (to add a bit of bootstrap to the menu)
+   - page.html.twig (to overwrite the default page)
+ - Most of the logic is in the .theme file (orchard_test.theme)
 
 
 ## Second Part of the test (choosing 3 from 5 tasks)
